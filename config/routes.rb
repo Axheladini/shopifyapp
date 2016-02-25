@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :accounts
-  resources :accounts
-  resources :accounts
-  resources :accounts
+  resources :accounts do
+member do
+get 'test_connection'
+end
+end
   get 'dashboard/index'
   root 'dashboard#index'
   # The priority is based upon order of creation: first created -> highest priority.
